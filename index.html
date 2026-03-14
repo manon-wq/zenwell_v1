@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenWell | Onboarding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidienne: '#1C1C1E',
+                        sunlight: '#FFD700',
+                        menthe: '#E0F2F1',
+                        eucalyptus: '#A8DADC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        premium: '0.05em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #1C1C1E; }
+        /* Animation subtile pour la barre de progression */
+        .progress-grow {
+            animation: grow 1.5s ease-out forwards;
+        }
+        @keyframes grow {
+            from { width: 0%; }
+            to { width: 25%; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-menthe">
+
+    <div class="min-h-screen flex flex-col px-6 py-8 md:px-12 max-w-7xl mx-auto">
+        
+        <nav class="flex justify-between items-center w-full">
+            <span class="text-xl font-extrabold tracking-premium text-menthe">
+                ZENWELL
+            </span>
+            <button class="text-eucalyptus text-sm font-medium hover:text-menthe transition-colors">
+                Passer
+            </button>
+        </nav>
+
+        <main class="flex-1 flex items-center justify-center">
+            <div class="w-full max-w-lg">
+                
+                <div class="mb-12">
+                    <div class="h-[2px] w-full bg-eucalyptus/20 rounded-full overflow-hidden">
+                        <div class="h-full bg-sunlight progress-grow"></div>
+                    </div>
+                    <p class="mt-3 text-[10px] uppercase tracking-[0.2em] text-eucalyptus/50 font-semibold">
+                        Étape 01 <span class="mx-2 text-eucalyptus/20">|</span> 04
+                    </p>
+                </div>
+
+                <header class="space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-extrabold uppercase tracking-premium leading-[1.1]">
+                        Le début de <br /> 
+                        <span class="text-sunlight">votre équilibre.</span>
+                    </h1>
+                    <p class="text-eucalyptus text-lg md:text-xl leading-relaxed max-w-md opacity-90">
+                        Quelques questions pour adapter nos séances à votre rythme et à vos objectifs personnels.
+                    </p>
+                </header>
+
+                <div class="mt-12">
+                    <button class="group relative w-full md:w-auto px-10 py-5 bg-sunlight text-obsidienne font-bold rounded-full 
+                                     hover:scale-[1.03] active:scale-[0.97] transition-all 
+                                     duration-300 shadow-xl shadow-sunlight/10 text-lg flex items-center justify-center gap-3">
+                        Commencer l'expérience
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-eucalyptus/10">
+            <p class="text-[10px] text-eucalyptus/30 uppercase tracking-[0.2em]">
+                © 2026 ZenWell Studio
+            </p>
+            <div class="flex gap-6">
+                <span class="text-[10px] text-eucalyptus/30 uppercase tracking-[0.1em]">Sport lent</span>
+                <span class="text-[10px] text-eucalyptus/30 uppercase tracking-[0.1em]">Pleine conscience</span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
